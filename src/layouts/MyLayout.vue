@@ -57,7 +57,7 @@
 import { openURL } from 'quasar'
 
 export default {
-  name: 'MyLayout',
+  name: 'MyLayout',   
   data () {
     return {
       leftDrawerOpen: false
