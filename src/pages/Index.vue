@@ -5,7 +5,7 @@
         <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">              
       </div>
       <div style="margin: 30px auto;">
-        Hi sweetheart, please change the img above to something else :)
+        OK, Go ahead.
       </div>
     </div>
   </q-page>
