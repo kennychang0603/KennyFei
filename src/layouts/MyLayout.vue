@@ -1,51 +1,58 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-layout-header>
-      <q-toolbar
-        color="primary"
-        :inverted="$q.theme === 'ios'"
-      >
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-        >
-          <q-icon name="menu" />
-        </q-btn>
+  <q-layout-body>
+    <head>
+      <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
 
-        <q-toolbar-title>
-          Kenny & Fei 's website
-          <div slot="subtitle">Just do it.</div>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-layout-header>
+    <h5>待認養寵物</h5>
+   
+    <!-- Lesson 2. Forms 表單 -->
+    <form action="mailto:yooomain@gmail.com" method="post" enctype="text/plain">
+      <label for="Search">搜尋姓名</label>
+      <input type="text" name="name"><br>
+      <label>進階搜尋</label> 
+      <textarea name="moresearch" id="" cols="10" rows="2"></textarea><br>
+      <input type="submit">
+    </form>
+    <!-- Forms End -->
+    
+    <hr>
+     <!--Lesson 1. HTML - table  -->
+      <table>
+        <!-- th=thead 標題 tr= table row td=table data -->
+        <thead>
+        <tr>
+          <th>姓名</th>
+          <th>可愛照片</th>
+          <th>聯絡飼主</th>
+        </tr>
+        </thead>
 
-    <q-layout-drawer
-      v-model="leftDrawerOpen"
-      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
-    >
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
-        <q-list-header>Essential Links</q-list-header>
-        <q-item @click.native="openURL('http://quasar-framework.org')">
-          <q-item-side icon="school" />
-          <q-item-main label="Docs" sublabel="quasar-framework.org" />
-        </q-item>
-        <q-item @click.native="openURL('https://github.com/quasarframework/')">
-          <q-item-side icon="code" />
-          <q-item-main label="GitHub" sublabel="github.com/quasarframework" />
-        </q-item>
-        <q-item @click.native="openURL('http://forum.quasar-framework.org')">
-          <q-item-side icon="record_voice_over" />
-          <q-item-main label="Forum" sublabel="forum.quasar-framework.org" />
-        </q-item>
-      </q-list>
-    </q-layout-drawer>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td><img src="/assets/EGG.png"></td>
+            <td><a href="/pages/Index.vue" target="_blank">A聯絡人</a></td>
+         </tr>
+         <tr>
+           <td>B</td>
+           <td><img src="/assets/EGG.png"></td>
+          <td><a href="https://www.google.com.tw/?gws_rd=ssl" target="_blank">B聯絡人</a></td>
+         </tr>
+        </tbody>
+        <tfoot>
+          
+        </tfoot>
+        
+      </table>
+      地方貓咪需要您的幫忙!
+    
+    <!-- table End -->
+  </body>
+  </q-layout-body>
+ 
 
     <q-page-container>
       <router-view />
@@ -70,4 +77,7 @@ export default {
 </script>
 
 <style>
+body{
+  color:blue; 
+}
 </style>
